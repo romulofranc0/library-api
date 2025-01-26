@@ -1,17 +1,14 @@
-package entities;
+package io.github.romulofranc0.libraryapi.entities;
 
 import jakarta.persistence.*;
 import lombok.Data;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 import java.time.LocalDate;
 import java.util.UUID;
 
-@Entity
 @Table(name = "livro")
 @Data
+@Entity
 public class Livro {
 
     @Id
@@ -23,10 +20,11 @@ public class Livro {
     private String titulo;
     @Column(name = "data_publicacao")
     private LocalDate dataPublicacao;
+
     @Enumerated(EnumType.STRING)
     @Column(name = "genero", nullable = false, length = 30)
     private GeneroLivro genero;
-    @Column(name = "preco", precision = 18, scale = 2)
+    @Column(name = "preco")
     private Double preco;
 
     @ManyToOne

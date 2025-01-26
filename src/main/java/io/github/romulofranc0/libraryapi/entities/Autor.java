@@ -1,16 +1,15 @@
-package entities;
+package io.github.romulofranc0.libraryapi.entities;
 
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.time.Instant;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.UUID;
 
-@Entity
 @Table(name="autor", schema = "public")
 @Data
+@Entity
 public class Autor {
 
     @Id
